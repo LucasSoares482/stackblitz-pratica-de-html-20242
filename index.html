@@ -10,10 +10,34 @@
   <form action="">
     <fieldset>
       <legend>Informações pessoais</legend>
-      <p>nome:<input type="text" size="30"></input></p>
-      <p>e-mail:<input type="text" size="30"></input></p>
-      <p>idade:<input type="text" size="5"></input></p>
+      <!-- nome email e idade da pessoa -->
+      <p>nome:<input type="text" size="30" placeholder="Coloque seu nome completo" required></input></p>
+      <p>e-mail:<input type="text" size="30" placeholder="coloque seu email legivel" required></input></p>
+      <p>idade:<input type="text" size="5" placeholder="sua idade" required></input></p>
+      <!-- seleção de sua universidade -->
+      <p>
+        <select name="universidades" id="">
+          <option value="ufra">UFRA</option>
+          <option value="ufpa">UFPA</option>
+          <option value="uepa">UEPA</option>
+          <option value="unama">UNAMA</option>
+        </select>
+      </p>
+      <!-- o navegador sendo utilizado pela pessoa -->
+      <p>qual navegador você utiliza?
+        <input list="browsers">
+        <datalist id="browsers">
+          <option value="internet explorer"></option>
+          <option value="Firefox"></option>
+          <option value="Chrome"></option>
+        </datalist>
+      </p>
+      <p><input type="number" name="qtde" min="1" max="5"></p>
+      <input type="date" name="nasc" id="">
+      <p><input type="color" name="favcolor" value="#ff0000" id=""></p>
+      <textarea name="" id="" cols="30" rows="10">Html é uma linguagem de programação interpretada pelo nvergador de internet (browser)</textarea>
     </fieldset>
-  </form>
+    </form>
+    <a href="exercicio.html">Login de usuario</a>
 </body>
 </html>
