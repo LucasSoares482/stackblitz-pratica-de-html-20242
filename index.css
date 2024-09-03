@@ -1,0 +1,13 @@
+/* muda a cor das palavras na classe corpo */
+
+/* .corpo{
+    color: blue;
+} */
+
+#principal{
+    padding-left: 20px;
+}
+#principal>p{
+    color: blue;
+    padding-left: 20px;
+}

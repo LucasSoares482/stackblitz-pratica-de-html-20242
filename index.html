@@ -5,17 +5,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>pratica de html terça-feira</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
+  <!-- formulario de usuario -->
   <form action="">
     <fieldset>
       <legend>Informações pessoais</legend>
       <!-- nome email e idade da pessoa -->
-      <p>nome:<input type="text" size="30" placeholder="Coloque seu nome completo" required></input></p>
+      <p>nome:<input type="text" size="30" placeholder="Coloque seu nome completo" required autofocus></input></p>
       <p>e-mail:<input type="text" size="30" placeholder="coloque seu email legivel" required></input></p>
       <p>idade:<input type="text" size="5" placeholder="sua idade" required></input></p>
       <!-- seleção de sua universidade -->
-      <p>
+      <p>qual sua universidade?
         <select name="universidades" id="">
           <option value="ufra">UFRA</option>
           <option value="ufpa">UFPA</option>
@@ -32,12 +34,38 @@
           <option value="Chrome"></option>
         </datalist>
       </p>
-      <p><input type="number" name="qtde" min="1" max="5"></p>
-      <input type="date" name="nasc" id="">
-      <p><input type="color" name="favcolor" value="#ff0000" id=""></p>
+      <!-- numero de 1 a 5 -->
+      <p>Quanto tempo dura seu curso?<input type="number" name="qtde" min="1" max="5"></p>
+      <!-- data de nascimento -->
+      <p>qual sua data de nascimento?<input type="date" name="nasc" id=""></p>
+      <!-- cor favorita -->
+      <p>qual sua cor favorita?<input type="color" name="favcolor" value="#ff0000" id=""></p>
+      <!-- area de texto -->
       <textarea name="" id="" cols="30" rows="10">Html é uma linguagem de programação interpretada pelo nvergador de internet (browser)</textarea>
     </fieldset>
     </form>
+    <!-- teste com divs -->
+    <br>
+    <div style="border-style: solid; margin-bottom: 20px;">DIV 1</div>
+    <div style="border-style: solid;">DIV 2</div>
+    <br>
+
+  <!-- div pequeno -->
+    <br>
+    <div style="border-style: solid; float: left; margin-bottom: 20px;">DIV 1</div>
+    <div style="border-style: solid; float: left;">DIV 2</div>
+    <br><br><br>
+
+    <!-- teste com css -->
+    <div class="principal">
+      <strong>Manchete</strong>
+      <p>Paragrafo 1</p>
+      <p>Paragrafo 2</p>
+    </div>
+
+    <!-- links para passear pelo codigo -->
+    <a href="tamanho.html">pagina amarela</a>
+    <br><br>
     <a href="exercicio.html">Login de usuario</a>
 </body>
 </html>
