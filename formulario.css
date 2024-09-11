@@ -2,7 +2,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 input[type="text"] {
-    background-color: #f0f0f0; /* Cor de fundo cinza */
+    background-color: rgb(245, 245, 139); /* Cor de fundo cinza */
     border: 1px solid #7c7c7c; /* Cor da borda */
     border-radius: 4px; /* Bordas arredondadas */
     box-sizing: border-box; /* Inclui padding e border na largura */
@@ -11,22 +11,24 @@ h4 {
     margin-bottom: 10px; /* Espaçamento entre o título e o campo */
 }
 select[name="estado"] {
-    background-color: #d3d3d3; /* Cor mais cinza */
+    background-color: yellow; /* Cor mais cinza */
     border: 1px solid #7c7c7c; /* Borda preta */
     padding: 5px;
     border-radius: 4px;
 }
 .beterraba{
     background-color: rgb(152, 236, 236); /* Cor de fundo cinza */
-    
+    border-style: dashed;
 
 }
 .beterraba2{
     background-color: rgb(245, 137, 159); /* Cor de fundo cinza */
+    border-style: dashed;
 }
 
 .beterraba3{
     background-color: rgb(139, 230, 169); /* Cor de fundo cinza */
+    border-style: dashed;
    
 }
 .beterraba4{
@@ -41,5 +43,5 @@ select[name="estado"] {
     
 }
 .beterraba6{
-    background-color: ; /* Cor de fundo cinza */
+    background-color: rgb(224, 224, 107); /* Cor de fundo cinza */
 }
