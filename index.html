@@ -1,74 +1,131 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>pratica de html terça-feira</title>
-  <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Usuário</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .qr-code {
+            width: 150px; /* Ajuste o tamanho conforme necessário */
+            height: auto;
+        }
+        .links {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 10px;
+        }
+        .square {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .square img {
+            width: 100px; /* Ajuste o tamanho conforme necessário */
+            height: 100px;
+            margin-right: 10px;
+        }
+        .square-content {
+            display: flex;
+            flex-direction: column;
+        }
+        .square-content h3 {
+            margin: 0;
+        }
+        .square-content p {
+            margin: 5px 0 0 0;
+        }
+        .custom-fieldset {
+            border: 2px solid #000; /* Cor da borda */
+            border-radius: 10px; /* Bordas arredondadas */
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-  <!-- formulario de usuario -->
-  <form action="">
-    <fieldset>
-      <legend>Informações pessoais</legend>
-      <!-- nome email e idade da pessoa -->
-      <p>nome:<input type="text" size="30" placeholder="Coloque seu nome completo" required autofocus></input></p>
-      <p>e-mail:<input type="text" size="30" placeholder="coloque seu email legivel" required></input></p>
-      <p>idade:<input type="text" size="5" placeholder="sua idade" required></input></p>
-      <!-- seleção de sua universidade -->
-      <p>qual sua universidade?
-        <select name="universidades" id="">
-          <option value="ufra">UFRA</option>
-          <option value="ufpa">UFPA</option>
-          <option value="uepa">UEPA</option>
-          <option value="unama">UNAMA</option>
-        </select>
-      </p>
-      <!-- o navegador sendo utilizado pela pessoa -->
-      <p>qual navegador você utiliza?
-        <input list="browsers">
-        <datalist id="browsers">
-          <option value="internet explorer"></option>
-          <option value="Firefox"></option>
-          <option value="Chrome"></option>
-        </datalist>
-      </p>
-      <!-- numero de 1 a 5 -->
-      <p>Quanto tempo dura seu curso?<input type="number" name="qtde" min="1" max="5"></p>
-      <!-- data de nascimento -->
-      <p>qual sua data de nascimento?<input type="date" name="nasc" id=""></p>
-      <!-- cor favorita -->
-      <p>qual sua cor favorita?<input type="color" name="favcolor" value="#ff0000" id=""></p>
-      <!-- area de texto -->
-      <textarea name="" id="" cols="30" rows="10">Html é uma linguagem de programação interpretada pelo nvergador de internet (browser)</textarea>
-    </fieldset>
+    <form>
+        <fieldset>
+            <legend>Informações Pessoais</legend>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" required>
+
+            <label for="universidade">Universidade:</label>
+            <select id="universidade" name="universidade" required>
+                <option value="uepa">UEPA</option>
+                <option value="unama">UNAMA</option>
+                <option value="ufra">UFRA</option>
+                <option value="ufpa">UFPA</option>
+            </select>
+
+            <label for="navegador">Navegador:</label>
+            <select id="navegador" name="navegador" required>
+                <option value="ie">Internet Explorer</option>
+                <option value="firefox">Firefox</option>
+                <option value="chrome">Chrome</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Endereço</legend>
+            <label for="rua">Rua:</label>
+            <input type="text" id="rua" name="rua" required>
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" required>
+
+            <label for="estado">Estado:</label>
+            <input type="text" id="estado" name="estado" required>
+
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>QR Code</legend>
+            <div style="display: flex; align-items: center;">
+                <img src="qr_code_image.png" alt="QR Code" class="qr-code">
+                <div class="links">
+                    <a href="#">Esqueceu a senha?</a>
+                    <a href="#">Registrar-se</a>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="custom-fieldset">
+            <legend>Informações Adicionais</legend>
+            <div class="square">
+                <img src="image1.png" alt="Imagem 1">
+                <div class="square-content">
+                    <h3>Título 1</h3>
+                    <p>Breve texto descritivo sobre a imagem 1.</p>
+                </div>
+            </div>
+
+            <div class="square">
+                <img src="image2.png" alt="Imagem 2">
+                <div class="square-content">
+                    <h3>Título 2</h3>
+                    <p>Breve texto descritivo sobre a imagem 2.</p>
+                </div>
+            </div>
+
+            <div class="square">
+                <img src="image3.png" alt="Imagem 3">
+                <div class="square-content">
+                    <h3>Título 3</h3>
+                    <p>Breve texto descritivo sobre a imagem 3.</p>
+                </div>
+            </div>
+        </fieldset>
+
+        <button type="submit">Enviar</button>
     </form>
-    <!-- teste com divs -->
-    <br>
-    <div style="border-style: solid; margin-bottom: 20px;">DIV 1</div>
-    <div style="border-style: solid;">DIV 2</div>
-    <br>
-
-  <!-- div pequeno -->
-    <br>
-    <div style="border-style: solid; float: left; margin-bottom: 20px;">DIV 1</div>
-    <div style="border-style: solid; float: left;">DIV 2</div>
-    <br><br><br>
-
-    <!-- padding no pai e padding duplo nos filhos -->
-    <div id="principal" style="border-style: solid;">
-      <strong>Manchete</strong>
-      <p>Paragrafo 1</p>
-      <p>Paragrafo 2</p>
-    </div>
-
-    <!-- links para passear pelo codigo -->
-    <a href="tamanho.html">pagina amarela</a>
-    <br><br>
-    <a href="exercicio.html">Login de usuario</a>
-    <br>
-    <br>
-    <a href="formulario.html">formulario</a>
 </body>
 </html>
